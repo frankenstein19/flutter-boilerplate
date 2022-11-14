@@ -1,10 +1,7 @@
+name: CI
 on:
   pull_request:
-    branches:
-      - main
   push:
-    branches:
-      - main
   name: "Build and Release"
   jobs:
     build:
@@ -12,16 +9,23 @@ on:
       runs-on: macos-latest
       steps:
         - uses: action/checkout@v1
+
         - uses: action/setup-java@v1
           with:
-            java-version: '12.x'
+            channel: 'stable'
+
         - uses: subosito/flutter-action@v1
           with:
-            flutter-version: '3.3.4'
+            channel: 'stable'
+
         - run: flutter pub get
+
         - run: flutter pub run build_runner build
+
         - run: flutter test
+
         - run: flutter build apk
+
         - name: Push to Release
           uses: ncipollo/release-action@v1
           with:
