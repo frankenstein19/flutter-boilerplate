@@ -19,6 +19,7 @@ on:
           with:
             flutter-version: '3.3.4'
         - run: flutter pub get
+        - run: flutter pub run build_runner build
         - run: flutter test
         - run: flutter build apk
         - name: Push to Release
