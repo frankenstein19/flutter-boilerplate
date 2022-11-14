@@ -6,14 +6,10 @@
 // tree, read text, and verify that the values of widget properties are correct.
 
 import 'package:bloc_test/bloc_test.dart';
-import 'package:flutter/material.dart';
 import 'package:flutter_boilerplate/di/di_config.dart';
-import 'package:flutter_boilerplate/domain/repo/mock_country_repo.dart';
 import 'package:flutter_boilerplate/domain/usecase/country_screen_usecase.dart';
 import 'package:flutter_boilerplate/presentation/country/bloc/country_bloc.dart';
 import 'package:flutter_test/flutter_test.dart';
-
-import 'package:flutter_boilerplate/main.dart';
 
 void main() {
 
@@ -33,4 +29,5 @@ void main() {
       isA<CountryLoadedState>(),
     ],
   );
+
 }
