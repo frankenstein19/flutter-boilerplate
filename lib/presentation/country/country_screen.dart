@@ -3,7 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'bloc/country_bloc.dart';
 
 class CountryScreen extends StatefulWidget {
-  static const path = "/";
+  static const path = "country";
 
   const CountryScreen({super.key});
 

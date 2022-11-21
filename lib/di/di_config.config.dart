@@ -12,7 +12,9 @@ import '../data/services/api_services.dart' as _i3;
 import '../domain/repo/country_repo.dart' as _i6;
 import '../domain/repo/i_country_repo.dart' as _i4;
 import '../domain/repo/mock_country_repo.dart' as _i5;
-import '../domain/usecase/country_screen_usecase.dart' as _i7;
+import '../domain/usecase/country_screen_usecase.dart' as _i8;
+import '../domain/usecase/login_screen_usecase.dart' as _i7;
+
 const String _TESTING = 'TESTING';
 const String _DEVELOPMENT = 'DEVELOPMENT';
 const String _PRODUCTION = 'PRODUCTION';
@@ -41,8 +43,16 @@ _i1.GetIt $initGetIt(
       _PRODUCTION,
     },
   );
-  gh.factory<_i7.CountryScreenUseCase>(
-    () => _i7.CountryScreenUseCase(get<_i4.ICountryRepo>()),
+  gh.factory<_i7.LoginScreenUseCase>(
+    () => _i7.LoginScreenUseCase(),
+    registerFor: {
+      _DEVELOPMENT,
+      _PRODUCTION,
+      _TESTING,
+    },
+  );
+  gh.factory<_i8.CountryScreenUseCase>(
+    () => _i8.CountryScreenUseCase(get<_i4.ICountryRepo>()),
     registerFor: {
       _DEVELOPMENT,
       _PRODUCTION,

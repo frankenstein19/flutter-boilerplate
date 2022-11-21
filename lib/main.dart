@@ -3,8 +3,11 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_boilerplate/di/di_config.dart';
 import 'package:flutter_boilerplate/presentation/country/bloc/country_bloc.dart';
 import 'package:flutter_boilerplate/presentation/country/country_screen.dart';
+import 'package:flutter_boilerplate/presentation/login/bloc/login_bloc.dart';
+import 'package:flutter_boilerplate/presentation/login/login_page.dart';
 
 import 'domain/usecase/country_screen_usecase.dart';
+import 'domain/usecase/login_screen_usecase.dart';
 
 void main() {
   configureDependencies(Env.development);
@@ -18,7 +21,9 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MultiBlocProvider(
-     providers: [BlocProvider(create: (_)=>CountryBloc(getIt<CountryScreenUseCase>()))],
+     providers: [BlocProvider(create: (_)=>CountryBloc(getIt<CountryScreenUseCase>())),
+       BlocProvider(create: (_)=>LoginBloc(getIt<LoginScreenUseCase>()))
+     ],
       child: MaterialApp(
         title: 'Flutter Demo',
         theme: ThemeData(
@@ -33,7 +38,11 @@ class MyApp extends StatelessWidget {
           // is not restarted.
           primarySwatch: Colors.blue,
         ),
-        routes: {CountryScreen.path: (_) => const CountryScreen()},
+        routes: {
+          CountryScreen.path: (_) => const CountryScreen(),
+          LoginPage.path: (_) => const LoginPage()
+
+        },
       ),
     );
   }
