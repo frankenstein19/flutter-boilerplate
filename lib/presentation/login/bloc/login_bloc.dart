@@ -6,7 +6,7 @@ part 'login_event.dart';
 part 'login_state.dart';
 
 class LoginBloc extends Bloc<LoginEvent, LoginState> {
-  LoginBloc(this.loginScreenUseCase) : super(LoginState()) {
+  LoginBloc(this.loginScreenUseCase) : super(const LoginState()) {
     on<EmailChanged>(_onEmailChanged);
     on<PasswordChanged>(_onPasswordChanged);
     on<OnLogin>(_onLogin);
