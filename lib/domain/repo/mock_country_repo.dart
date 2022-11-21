@@ -1,14 +1,13 @@
 import 'dart:async';
 import 'dart:convert';
-
-import 'package:flutter_boilerplate/data/model/country_list_response.dart';
-
-import 'package:flutter_boilerplate/di/di_config.dart';
-import 'package:flutter_boilerplate/domain/repo/i_country_repo.dart';
 import 'package:injectable/injectable.dart';
 
 // ignore: depend_on_referenced_packages
 import 'package:mockito/mockito.dart';
+
+import '../../data/model/country_list_response.dart';
+import '../../di/di_config.dart';
+import 'i_country_repo.dart';
 
 @testEnv
 @Injectable(as:ICountryRepo)

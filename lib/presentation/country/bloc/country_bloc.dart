@@ -1,9 +1,10 @@
 
 import 'package:equatable/equatable.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_boilerplate/domain/usecase/country_screen_usecase.dart';
+
 
 import '../../../data/model/country_list_response.dart';
+import '../../../domain/usecase/country_screen_usecase.dart';
 
 part 'country_event.dart';
 part 'country_state.dart';

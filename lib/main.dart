@@ -1,13 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_boilerplate/di/di_config.dart';
-import 'package:flutter_boilerplate/presentation/country/bloc/country_bloc.dart';
-import 'package:flutter_boilerplate/presentation/country/country_screen.dart';
-import 'package:flutter_boilerplate/presentation/login/bloc/login_bloc.dart';
-import 'package:flutter_boilerplate/presentation/login/login_page.dart';
 
+
+import 'di/di_config.dart';
 import 'domain/usecase/country_screen_usecase.dart';
 import 'domain/usecase/login_screen_usecase.dart';
+import 'presentation/country/bloc/country_bloc.dart';
+import 'presentation/country/country_screen.dart';
+import 'presentation/login/bloc/login_bloc.dart';
+import 'presentation/login/login_page.dart';
 
 void main() {
   configureDependencies(Env.development);

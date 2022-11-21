@@ -1,10 +1,11 @@
 import 'dart:async';
 
-import 'package:flutter_boilerplate/data/model/country_list_response.dart';
-import 'package:flutter_boilerplate/data/services/api_services.dart';
-import 'package:flutter_boilerplate/di/di_config.dart';
+
 import 'package:injectable/injectable.dart';
 
+import '../../data/model/country_list_response.dart';
+import '../../data/services/api_services.dart';
+import '../../di/di_config.dart';
 import 'i_country_repo.dart';
 @devEnv
 @prodEnv

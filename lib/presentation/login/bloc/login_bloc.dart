@@ -1,7 +1,9 @@
 import 'package:equatable/equatable.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_boilerplate/domain/usecase/login_screen_usecase.dart';
+
+import '../../../domain/usecase/login_screen_usecase.dart';
+
 part 'login_event.dart';
 part 'login_state.dart';
 
